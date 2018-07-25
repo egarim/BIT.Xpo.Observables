@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Xpo" Version="16.2.6" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.3.0" />
+  </ItemGroup>
+
+</Project>
