@@ -11,7 +11,7 @@ using System.ComponentModel;
 using System.Linq;
 
 namespace BIT.Xpo.Observables
-{
+{  
     /// <summary>
     /// A descendant  of a  XPCollection<T> that implements INotifyCollectionChanged
     /// </summary>
@@ -43,6 +43,7 @@ namespace BIT.Xpo.Observables
             }
 
 
+            
 
 
             OnInternalCollectionChanged(this, ObservableArgs);

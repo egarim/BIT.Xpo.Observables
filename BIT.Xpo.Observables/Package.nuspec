@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>BIT.Xpo.Observables</id>
+    <version>1.0.0.1</version>
+    <title>BIT.Xpo.Observables</title>
+    <authors>Jose Manuel Ojeda Melgar</authors>
+    <owners>Jose Manuel Ojeda Melgar</owners>
+    <projectUrl>https://github.com/egarim/BIT.Xpo.Observables</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An Observable implementation of  XpCollection T and PageSelector </description>
+    <releaseNotes>First public release</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <summary>
+      XpoObservableCollection  inherit from a XPCollection so to use it just us it as you would use an XPCollection, the only difference is that this XpoObservableCollection refresh the state of ListViews on Xamarin forms
+      XamarinXpoPageSelector internally implements XPPageSelector. On the constructor you need to pass the following parametersXPCollection collection = the XpCollection for paging 
+      int PageSize = the size of the page
+      XpoObservablePageSelectorBehavior = the behavior this can be Append to add the results of the new page to the collection or single page to clear the last page results before show the new page
+    </summary>
+    <iconUrl>http://www.bitframeworks.com/wp-content/uploads/2017/06/BitFrameWorksLogo.png</iconUrl>
+    <tags>BitFwks BitFrameworks XAF DevExpress Xpo MVVM XamarinForms </tags>
+    <dependencies>
+      <dependency id="DevExpress.Xpo" version="16.2.6" />
+      <dependency id="Refractored.MvvmHelpers" version="1.3.0" />
+    </dependencies>
+    <contentFiles>
+     <files include="cs/**/*.*" buildAction="Compile" />
+    </contentFiles>
+  </metadata>
+<files>
+    <file src="XpoObservableCollection.cs" target="contentFiles\cs\any"></file>
+    <file src="XpoObservablePageSelector.cs" target="contentFiles\cs\any"></file>
+    <file src="XpoObservablePageSelectorBehavior.cs" target="contentFiles\cs\any"></file>
+    <file src="readme.txt" target="" />
+  </files>
+</package>
