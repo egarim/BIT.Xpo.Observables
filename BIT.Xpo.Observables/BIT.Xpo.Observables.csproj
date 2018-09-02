@@ -1,12 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>
+      netstandard2.0;net45;net40;net451;net452;net46;net461;net462;net47;net471
+    </TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/egarim/BIT.Xpo.Observables</PackageProjectUrl>
+    <PackageId>BIT.Xpo.Observables</PackageId>
+    <Version>1.0.0.2</Version>
+    <Authors>Jose Manuel Ojeda Melgar</Authors>
+    <Company>BitFwks</Company>
+    <Description>An Observable implementation of  XpCollection T and PageSelector</Description>
+    <Copyright>Copyright 2018</Copyright>
+    <PackageIconUrl>http://www.bitframeworks.com/wp-content/uploads/2017/06/BitFrameWorksLogo.png</PackageIconUrl>
+    <PackageTags>BitFwks BitFrameworks XAF DevExpress Xpo MVVM XamarinForms JocheOjeda</PackageTags>
+    <PackageReleaseNotes>New target frameworks  for DotNetFramework 4 and above</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/egarim/BIT.Xpo.Observables</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="DevExpress.Xpo" Version="16.2.6" />
-    <PackageReference Include="Refractored.MvvmHelpers" Version="1.3.0" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,5 @@
 ﻿using DevExpress.Xpo;
-using MvvmHelpers;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

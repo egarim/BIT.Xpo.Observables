@@ -1,7 +1,7 @@
 ﻿using DevExpress.Data.Filtering;
 using DevExpress.Xpo;
 using DevExpress.Xpo.Metadata;
-using MvvmHelpers;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
