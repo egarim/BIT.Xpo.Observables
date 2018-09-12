@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/egarim/BIT.Xpo.Observables</PackageProjectUrl>
     <PackageId>BIT.Xpo.Observables</PackageId>
-    <Version>17.2.9</Version>
+    <Version>17.2.10</Version>
     <Authors>Jose Manuel Ojeda Melgar</Authors>
     <Company>BitFwks</Company>
     <Description>An Observable implementation of  XpCollection T and PageSelector</Description>
@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevExpress.Xpo" Version="17.2.9" />
+    <PackageReference Include="DevExpress.Xpo" Version="17.2.10" />
   </ItemGroup>
 
 </Project>
