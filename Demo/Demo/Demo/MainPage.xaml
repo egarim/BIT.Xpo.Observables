@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Demo"
+             x:Class="Demo.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Button Text="NextPage" x:Name="NextPage"></Button>
+        <Button Text="PreviousPage" x:Name="PreviousPage"></Button>
+        <Button Text="Add Item" x:Name="AddItems"></Button>
+        <ListView  x:Name="listView" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="#eee"
+                        Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Description}"
+                                HorizontalOptions="EndAndExpand"
+                                TextColor="#503026" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

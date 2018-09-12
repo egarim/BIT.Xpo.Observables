@@ -17,7 +17,7 @@ namespace BIT.Xpo.Observables
             this.Selector = new XPPageSelector(collection);
             this.Selector.PageSize = PageSize;
             _Behavior = Behavior;
-
+            this.Selector.CurrentPage = 1;
         }
       
         public int CurrentPage
