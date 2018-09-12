@@ -28,7 +28,7 @@ namespace Demo
             Collection.Sorting = sorting;
 
             selector = new XamarinXpoPageSelector<Item>(Collection,10, XpoObservablePageSelectorBehavior.AppendPage);
-            selector.CurrentPage = 0;
+            //selector.CurrentPage = 0;
 
 
             //XpoObservableCollection<Item> Observabl = new XpoObservableCollection<Item>(uoW);
