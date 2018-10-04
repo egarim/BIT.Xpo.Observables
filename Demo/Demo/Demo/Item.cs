@@ -1,7 +1,5 @@
 ﻿using DevExpress.Xpo;
 using DevExpress.Xpo.Metadata;
-using System;
-using System.Linq;
 using Xamarin.Forms;
 
 namespace Demo
@@ -36,6 +34,13 @@ namespace Demo
         {
             get { return description; }
             set { SetPropertyValue("Description", ref description, value); }
+        }
+
+        int _index;
+        public int Index
+        {
+            get => _index;
+            set => SetPropertyValue(nameof(Index), ref _index, value);
         }
     }
 }

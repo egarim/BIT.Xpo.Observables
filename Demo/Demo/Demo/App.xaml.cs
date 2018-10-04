@@ -36,12 +36,24 @@ namespace Demo
 
             XpoHelper.InitXpo(connectionString);
             var uoW = XpoHelper.CreateUnitOfWork();
-            if (!uoW.Query<Item>().Any())
+            XPQuery<Item> xPQuery = uoW.Query<Item>(); //Similar to XPCollection
+
+
+            XPCollection<Item> ItemsXpCollection = new XPCollection<Item>();//HACK For XPCollection use criteria in constructor or filter
+            //ItemsXpCollection.Filter = new BinaryOperator("", "");
+
+            //var queryResult= xPQuery.Where(e => e.Description == "algo"); //Better
+
+            //var Reuslt = ItemsXpCollection.Where(e => e.Description == "algo"); //Ineficiente  load whole collection
+
+
+            if (!xPQuery.Any())
             {
                 for (int i = 0; i < 1000; i++)
                 {
                     Item Object = new Item(uoW);
                     Object.Description = "Item number:" + i.ToString();
+                    Object.Index = i;
                 }
                 if (uoW.InTransaction)
                     uoW.CommitChanges();

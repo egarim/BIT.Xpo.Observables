@@ -4,24 +4,20 @@
              xmlns:local="clr-namespace:Demo"
              x:Class="Demo.MainPage">
 
-    <StackLayout>
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-        <Button Text="NextPage" x:Name="NextPage"></Button>
-        <Button Text="PreviousPage" x:Name="PreviousPage"></Button>
-        <Button Text="Add Item" x:Name="AddItems"></Button>
-        <ListView  x:Name="listView" HasUnevenRows="True">
+        <Button Text="Next Page" x:Name="NextPage" WidthRequest="200" HorizontalOptions="CenterAndExpand"></Button>
+        <Button Text="Previous Page" x:Name="PreviousPage" WidthRequest="200" HorizontalOptions="CenterAndExpand"></Button>
+        <Button Text="Change Behavior" x:Name="ChangeBehavior" WidthRequest="200" HorizontalOptions="CenterAndExpand"></Button>
+        <ListView  x:Name="listView" Margin="0,10,0,0" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout BackgroundColor="#eee"
-                        Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
+                        <StackLayout BackgroundColor="#eee" Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                                 <Label Text="{Binding Description}"
                                 HorizontalOptions="EndAndExpand"
-                                TextColor="#503026" />
+                                TextColor="#503026" Margin="0,0,0,5"/>
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>

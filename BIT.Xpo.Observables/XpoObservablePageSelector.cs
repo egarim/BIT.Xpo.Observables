@@ -1,6 +1,4 @@
 ﻿using DevExpress.Xpo;
-
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,33 +7,61 @@ namespace BIT.Xpo.Observables
 {
     public class XamarinXpoPageSelector<T>:INotifyPropertyChanged
     {
-        private readonly XPPageSelector Selector;
+        public readonly XPPageSelector Selector;
         ObservableRangeCollection<T> _ObservableData = new ObservableRangeCollection<T>();
-        readonly XpoObservablePageSelectorBehavior _Behavior;
+        public XpoObservablePageSelectorBehavior _Behavior;
         public XamarinXpoPageSelector(XPCollection<T> collection,int PageSize, XpoObservablePageSelectorBehavior Behavior)
         {
             this.Selector = new XPPageSelector(collection);
             this.Selector.PageSize = PageSize;
             _Behavior = Behavior;
-            //this.Selector.CurrentPage = 1;
+            CurrentPage = 0;
+
         }
-      
+        int _currentPage=-1;
         public int CurrentPage
         {
-            get { return this.Selector.CurrentPage; }
+            get { return _currentPage; }
             set
             {
-                if (this.Selector.CurrentPage == value)
+                if ( _currentPage == value)
                     return;
-                this.Selector.CurrentPage = value;
+
+                if (-1 == value)
+                    return;
+
+                _currentPage = value;
+                this.Selector.CurrentPage = _currentPage;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(CurrentPage)));
                 ProcessData();
             }
         }
-        
+        //public int CurrentPage
+        //{
+        //    get { return this.Selector.CurrentPage; }
+        //    set
+        //    {
+        //        if (this.Selector.CurrentPage == value)
+        //            return;
+        //        this.Selector.CurrentPage = value;
+        //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(CurrentPage)));
+        //        ProcessData();
+        //    }
+        //}
+
         public ObservableRangeCollection<T> ObservableData { get => _ObservableData; set => _ObservableData = value; }
 
-        public XpoObservablePageSelectorBehavior Behavior => _Behavior;
+        public XpoObservablePageSelectorBehavior Behavior
+        {
+            get
+            {
+                return _Behavior;
+            }
+            set
+            {
+                _Behavior = value;
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
