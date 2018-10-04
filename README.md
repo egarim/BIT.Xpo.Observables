@@ -29,9 +29,7 @@ XpoObservablePageSelectorBehavior = AppendPage or SinglePage.
 
 Use Append in case you want to to add the results of the new page to the collection or Single page to clear the last page results before show the new page.
 
-And that's it. The same awesome ObservableRangeCollection [(from MVVM Helpers)](https://github.com/jamesmontemagno/mvvm-helpers) that adds important methods such as: **AddRange, RemoveRange, Replace, and ReplaceRange**, it is now available in XPO and of course it is open source so go and take a look behind the curtains.
-
-https://github.com/egarim/BIT.Xpo.Observables
+And that's it. The same awesome ObservableRangeCollection [(from MVVM Helpers)](https://github.com/jamesmontemagno/mvvm-helpers) that adds important methods such as: **AddRange, RemoveRange, Replace, and ReplaceRange**, it is now available in XPO.
 
 https://www.nuget.org/packages/BIT.Xpo.Observables/
 
