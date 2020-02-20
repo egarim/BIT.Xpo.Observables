@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>
-      netstandard2.0;net45;net40;net451;net452;net46;net461;net462;net47;net471
+      netstandard2.0
     </TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/egarim/BIT.Xpo.Observables</PackageProjectUrl>
@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevExpress.Xpo" Version="17.2.4" />
+    <PackageReference Include="DevExpress.Xpo" Version="19.2.6" />
   </ItemGroup>
 
 </Project>
